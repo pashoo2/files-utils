@@ -1,3 +1,14 @@
-export declare const getFilenameByUrl: (url: string) => string | undefined;
-export declare const downloadFileByUrl: (url: string, filename?: string) => void;
-export declare const downloadFile: (file: File) => void;
+/**
+ * Start download of a file by it's url and an optional filename.
+ *
+ * @export
+ * @param {string} url
+ * @param {string} [filename='']
+ */
+export declare function downloadFileByUrl(url: string, filename?: string): void;
+/**
+ * Start downloading of a file in a browser
+ *
+ * @param file
+ */
+export declare function downloadFile(file: File): void;

@@ -1,6 +1,41 @@
 /// <reference types="node" />
-export declare const getBlobSize: (o: Blob) => number;
-export declare const getFileObjectSize: (o: File) => number;
-export declare const getArrayBufSize: (o: ArrayBuffer) => number;
-export declare const getBufferSize: (o: Buffer) => number;
-export declare const getFileSize: (o: File | Blob | ArrayBuffer | Buffer) => number | undefined;
+/**
+ * Returns size of a Blob.
+ *
+ * @export
+ * @param {Blob} o
+ * @returns {number}
+ */
+export declare function getBlobSize(o: Blob): number;
+/**
+ * Returns size of a File.
+ *
+ * @export
+ * @param {File} o
+ * @returns {number}
+ */
+export declare function getFileObjectSize(o: File): number;
+/**
+ * Returns size of a File.
+ *
+ * @export
+ * @param {ArrayBuffer} o
+ * @returns {number}
+ */
+export declare function getArrayBufSize(o: ArrayBuffer): number;
+/**
+ * Returns size of a Buffer.
+ *
+ * @export
+ * @param {Buffer} o
+ * @returns {number}
+ */
+export declare function getBufferSize(o: Buffer): number;
+/**
+ * Returns a size of a data.
+ *
+ * @export
+ * @param {(File | Blob | ArrayBuffer | Buffer)} o
+ * @returns {(number | undefined)}
+ */
+export declare function getFileSize(o: File | Blob | ArrayBuffer | Buffer): number | undefined;
