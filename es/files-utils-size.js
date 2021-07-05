@@ -1,28 +1,71 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFileSize = exports.getBufferSize = exports.getArrayBufSize = exports.getFileObjectSize = exports.getBlobSize = void 0;
-var getBlobSize = function (o) { return o.size; };
+/**
+ * Returns size of a Blob.
+ *
+ * @export
+ * @param {Blob} o
+ * @returns {number}
+ */
+function getBlobSize(o) {
+    return o.size;
+}
 exports.getBlobSize = getBlobSize;
-var getFileObjectSize = function (o) { return o.size; };
+/**
+ * Returns size of a File.
+ *
+ * @export
+ * @param {File} o
+ * @returns {number}
+ */
+function getFileObjectSize(o) {
+    return o.size;
+}
 exports.getFileObjectSize = getFileObjectSize;
-var getArrayBufSize = function (o) { return o.byteLength; };
+/**
+ * Returns size of a File.
+ *
+ * @export
+ * @param {ArrayBuffer} o
+ * @returns {number}
+ */
+function getArrayBufSize(o) {
+    return o.byteLength;
+}
 exports.getArrayBufSize = getArrayBufSize;
-var getBufferSize = function (o) { return o.byteLength; };
+/**
+ * Returns size of a Buffer.
+ *
+ * @export
+ * @param {Buffer} o
+ * @returns {number}
+ */
+function getBufferSize(o) {
+    return o.byteLength;
+}
 exports.getBufferSize = getBufferSize;
-var getFileSize = function (o) {
+/**
+ * Returns a size of a data.
+ *
+ * @export
+ * @param {(File | Blob | ArrayBuffer | Buffer)} o
+ * @returns {(number | undefined)}
+ */
+function getFileSize(o) {
     if (o instanceof File) {
-        return exports.getFileObjectSize(o);
+        return getFileObjectSize(o);
     }
     if (o instanceof Blob) {
-        return exports.getBlobSize(o);
+        return getBlobSize(o);
     }
     if (o instanceof Buffer) {
-        return exports.getBufferSize(o);
+        return getBufferSize(o);
     }
     if (o instanceof ArrayBuffer) {
-        return exports.getArrayBufSize(o);
+        return getArrayBufSize(o);
     }
     return undefined;
-};
+}
 exports.getFileSize = getFileSize;
 //# sourceMappingURL=files-utils-size.js.map
