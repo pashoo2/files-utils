@@ -1,2 +1,5 @@
-# files-utils
-Utilities to make easier work with files - to download it or get a size of, etc.
+@pashoo2/files-utils
+
+A set of utilities to work with files.
+
+[See docs](/docs/modules.md)
